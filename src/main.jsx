@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
@@ -9,27 +9,28 @@ import {
 import Home from './components/Home';
 import Register from './components/Register';
 import Login from './components/Login';
+import AuthProdiver, { AuthContex } from './providers/AuthProdiver';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
+    element: <App />,
     children: [
       {
         path: '/',
-        element: <Home/>
+        element: <Home />
       },
       {
         path: 'register',
-        element:<Register/>
+        element: <Register />
       },
       {
         path: 'login',
-        element: <Login/>
+        element: <Login />
       },
       {
         path: '/',
-        element: <Home/>
+        element: <Home />
       },
     ]
   },
@@ -38,6 +39,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <AuthProdiver>
+      <RouterProvider router={router} />
+    </AuthProdiver>
   </React.StrictMode>,
 )

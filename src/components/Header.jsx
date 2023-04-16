@@ -15,7 +15,7 @@ const Header = () => {
                         <li tabIndex={0}> <Link to='/login'> Login </Link> </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">AFCT</a>
+                <a className="btn btn-ghost normal-case text-xl">Auth Master</a>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
