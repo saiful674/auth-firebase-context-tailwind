@@ -6,7 +6,6 @@ const Home = () => {
     return (
         <div>
             home
-            <p>{user && user}</p>
         </div>
     );
 };
